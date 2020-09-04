@@ -4,7 +4,11 @@ import routes from './router'
 import store from './store'
 import VueRouter from 'vue-router'
 import '../public-path'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+Vue.use(ElementUI)
 Vue.config.productionTip = false
+
 let router = null
 let instance = null
 function render (props) {

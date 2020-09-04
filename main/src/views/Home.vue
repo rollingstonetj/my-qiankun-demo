@@ -2,8 +2,6 @@
   <div class="home">
     <h1>我是主demo</h1>
     <div class="nav">
-      <router-link to="">跳转之微前端子应用1</router-link>
-      <router-link to="">跳转至微前端自应用2</router-link>
     </div>
     <div class="content">
       <div id="subappContent"></div>

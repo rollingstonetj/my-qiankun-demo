@@ -8,6 +8,8 @@
       </div>
       <div class="content">
         <div id="subappContent"></div>
+        <div id="common"></div>
+        <!-- <div id="common_subapp1"></div> -->
       </div>
     </div>
   </div>
@@ -33,7 +35,7 @@ export default {
   color: #2c3e50;
   height: 100%;
   .home {
-      height: 100%;
+    height: 100%;
   }
   .nav {
     width: 200px;
@@ -64,5 +66,14 @@ html, body {
   padding: 0;
   box-sizing: border-box;
 }
-
+#subappContent {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+#common_subapp1 {
+  width: 300px;
+  height: 300px;
+  overflow: scroll;
+}
 </style>

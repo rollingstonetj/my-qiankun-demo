@@ -2,10 +2,9 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import { registerMicroApps, start, setDefaultMountApp, initGlobalState } from 'qiankun'
-
+import { registerMicroApps, start, initGlobalState } from 'qiankun' // setDefaultMountApp
+import { loadCommonApp } from './loadApp'
 Vue.config.productionTip = false
-
 let app = null
 /**
  * 渲染函数
@@ -45,7 +44,8 @@ registerMicroApps([
     activeRule: genActiveRule('/app1'),
     props: {
       routerPrefix: '/app1',
-      store
+      store,
+      loadCommonApp
     }
   },
   {
@@ -76,7 +76,7 @@ registerMicroApps([
   }
 })
 // 设置默认子应用,与 genActiveRule中的参数保持一致
-setDefaultMountApp('/app1')
+// setDefaultMountApp('/app1')
 const globalState = {
   count: 0
 }

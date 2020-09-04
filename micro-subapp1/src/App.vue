@@ -4,6 +4,7 @@
       <router-link to="/">Home1</router-link> |
       <router-link to="/about">About1</router-link>
     </div>
+    <div id="common_subapp1"></div>
     <router-view/>
   </div>
 </template>
@@ -15,6 +16,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  height: 100%;
 }
 
 #nav {
@@ -28,5 +30,12 @@
       // color: #42b983;
     }
   }
+}
+#common_subapp1 {
+  width: 300px;
+  height: 300px;
+  border: 1px solid pink;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
 </style>
