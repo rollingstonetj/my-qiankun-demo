@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import { registerMicroApps, start, initGlobalState } from 'qiankun' // setDefaultMountApp
+import { registerMicroApps, start, initGlobalState, setDefaultMountApp } from 'qiankun' // setDefaultMountApp
 import { loadCommonApp } from './loadApp'
 Vue.config.productionTip = false
 let app = null
@@ -76,7 +76,7 @@ registerMicroApps([
   }
 })
 // 设置默认子应用,与 genActiveRule中的参数保持一致
-// setDefaultMountApp('/app1')
+setDefaultMountApp('/app1')
 const globalState = {
   count: 0
 }
@@ -86,10 +86,11 @@ actions.onGlobalStateChange((state, prev) => {
   console.log(globalState, 'gloablState')
 })
 actions.offGlobalStateChange()
+// 启动
 start({
   prefetch: false,
   sandbox: {
     // strictStyleIsolation: true
   },
-  singular: true
+  singular: false// 如果需要其他微应用中手动加载其他微应用，那么这个要设置为false
 })

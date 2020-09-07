@@ -1,11 +1,12 @@
 import Vue from 'vue'
 import App from './App.vue'
 import store from './store'
+import '../public-path' // 更改webpack路径配置
 Vue.config.productionTip = false
 
 let instance = null
 function render (props) {
-  console.log(window.__POWERED_BY_QIANKUN__, '===')
+  console.log(window.__POWERED_BY_QIANKUN__, 'common', '===')
   /* eslint-disable */
   instance = new Vue({
     store,
@@ -16,13 +17,12 @@ function render (props) {
 if (!(window).__POWERED_BY_QIANKUN__) {
   render({})
 }
+
 export async function bootstrap () {
   console.log('common app bootstrap')
 }
 export async function mount (props) {
-  console.log(props, 'common mount')
-  // const { store } = props
-  // store.dispatch('common', {currentMicroApp: '微应用2'})
+  console.log(props, '手动挂在的子应用   mount')
   render(props)
 }
 export async function unmount () {

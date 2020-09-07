@@ -3,8 +3,8 @@ import { loadMicroApp } from 'qiankun'
 const globalCommonLoadApps = {
   common: {
     name: 'common',
-    entry: '//localhost:8083',
-    container: '#common'
+    entry: '//localhost:8083/',
+    container: '#common_subapp1'
   }
 }
 

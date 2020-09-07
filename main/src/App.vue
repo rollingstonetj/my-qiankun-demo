@@ -8,8 +8,6 @@
       </div>
       <div class="content">
         <div id="subappContent"></div>
-        <div id="common"></div>
-        <!-- <div id="common_subapp1"></div> -->
       </div>
     </div>
   </div>
